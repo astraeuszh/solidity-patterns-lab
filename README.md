@@ -44,8 +44,10 @@ known limitations, and test coverage in `docs/`.
 
 ## Status
 
-The repository currently contains only the reviewed project skeleton. Contract
-examples will be added in a separate implementation pass.
+The first executable example is `PullPaymentVault`, a small ETH credit vault
+covering pull payments, CEI ordering, reentrancy protection, pausing, custom
+errors, and explicit ownership boundaries. Its assumptions and limitations are
+documented in [docs/pull-payment-vault.md](docs/pull-payment-vault.md).
 
 ## License
 
