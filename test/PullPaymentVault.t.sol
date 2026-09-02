@@ -42,8 +42,7 @@ contract PullPaymentVaultTest {
 
         try caller.pause(vault) {
             reverted = false;
-        }
-        catch {
+        } catch {
             reverted = true;
         }
 
@@ -58,8 +57,7 @@ contract PullPaymentVaultTest {
 
         try vault.deposit{value: 1 ether}() {
             reverted = false;
-        }
-        catch {
+        } catch {
             reverted = true;
         }
 
@@ -74,8 +72,7 @@ contract PullPaymentVaultTest {
 
         try vault.withdraw(2 ether) {
             reverted = false;
-        }
-        catch {
+        } catch {
             reverted = true;
         }
 
