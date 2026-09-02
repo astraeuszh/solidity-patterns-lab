@@ -40,7 +40,10 @@ contract PullPaymentVaultTest {
         NonOwner caller = new NonOwner();
         bool reverted;
 
-        try caller.pause(vault) {} catch {
+        try caller.pause(vault) {
+            reverted = false;
+        }
+        catch {
             reverted = true;
         }
 
@@ -53,7 +56,10 @@ contract PullPaymentVaultTest {
         vault.pause();
         bool reverted;
 
-        try vault.deposit{value: 1 ether}() {} catch {
+        try vault.deposit{value: 1 ether}() {
+            reverted = false;
+        }
+        catch {
             reverted = true;
         }
 
@@ -66,7 +72,10 @@ contract PullPaymentVaultTest {
         vault.deposit{value: 1 ether}();
         bool reverted;
 
-        try vault.withdraw(2 ether) {} catch {
+        try vault.withdraw(2 ether) {
+            reverted = false;
+        }
+        catch {
             reverted = true;
         }
 
